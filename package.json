@@ -1,0 +1,11 @@
+{
+  "name": "try-nightwatch",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "nightwatch": "^1.0.6"
+  },
+  "scripts": {
+    "test-main": "nightwatch --env nwea"
+  }
+}

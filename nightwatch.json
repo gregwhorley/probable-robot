@@ -1,0 +1,63 @@
+{
+  "src_folders": ["tests"],
+  "output_folder": "reports",
+  "custom_commands_path": "",
+  "custom_assertions_path": "",
+  "page_objects_path": "pages",
+  "globals_path": "",
+  "live_output": true,
+
+  "selenium": {
+    "start_process": false,
+    "host": "localhost",
+    "port": 4444
+  },
+
+  "test_workers": {
+    "enabled": true,
+    "workers": 1
+  },
+
+  "test_settings": {
+    "default" : {
+      "launch_url": "http://localhost",
+      "selenium_port": 4444,
+      "selenium_host": "localhost",
+      "silent": true,
+      "screenshots": {
+        "enabled": true,
+        "on_failure": true,
+        "path": "screenshots"
+      },
+      "desiredCapabilities": {
+        "browserName": "firefox",
+        "marionette": true,
+        "acceptInsecureCerts": true
+      }
+    },
+
+    "nwea": {
+      "launch_url": "https://www.nwea.org",
+      "selenium_port": 4444,
+      "selenium_host": "localhost",
+      "silent": true,
+      "screenshots": {
+        "enabled": true,
+        "path": "screenshots",
+        "on_failure": true,
+        "on_error": true
+      },
+      "request_timeout_options": {
+        "timeout": 10000,
+        "retry_attempts": 3
+      },
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "skip_testcases_on_fail": false,
+        "end_session_on_fail": false
+      }
+    }
+  }
+}
